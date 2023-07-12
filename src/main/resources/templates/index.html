@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pokemon Type List:</h1>
+    <li th:each="g:${pokemonList}" data-th-object="${g}">
+        <a th:href="@{/pokemon/{type}(type=${g})}" >
+            <span data-th-text="${g}"></span>
+        </a>
+        
+    </li>
+    
+</body>
+</html>
